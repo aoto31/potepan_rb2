@@ -1,0 +1,38 @@
+def janken
+   
+    puts "じゃんけん……"
+    puts "0(グー)1(チョキ)2(パー)3(戦わない)"
+    
+    hand_type = gets.to_i
+    random_hand = rand(3) 
+   
+    jankens = ["グー","チョキ","パー","戦わない"]
+    
+    puts "ホイ！"
+    puts "------------------"
+    puts "あなた：#{jankens[hand_type]}を出しました"
+    puts "相手：#{jankens[random_hand]}を出しました"
+    puts "------------------"
+
+    if hand_type == 3 || random_hand == 3
+        puts "ジャンケンが放棄されました。ゲームを終了します。"
+        return true
+    else
+        number = hand_type - random_hand
+        case number
+            when 0 then
+                puts "あいこです。もう一度じゃんけんをします。"
+                return janken
+            when 1,-2 then
+                puts "じゃんけんに負けました。"
+                require "./hoi_lose"
+                
+            when -1,2 then
+                puts "じゃんけんに勝ちました。"
+                require "./hoi_win"
+                
+        end
+    end
+end
+
+
