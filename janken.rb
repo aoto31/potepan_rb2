@@ -22,17 +22,23 @@ def janken
         case number
             when 0 then
                 puts "あいこです。もう一度じゃんけんをします。"
-                return janken
+                janken
             when 1,-2 then
                 puts "じゃんけんに負けました。"
-                require "./hoi_lose"
+                load './hoi_lose.rb'
+#                hoi_lose = Hoi2.new
+#                hoi_lose.Hoi2
                 
             when -1,2 then
                 puts "じゃんけんに勝ちました。"
-                require "./hoi_win"
+                load './hoi_win.rb'
+#                hoi_win = Hoi1.new
+#                hoi_win.Hoi1
                 
         end
     end
 end
+
+janken
 
 

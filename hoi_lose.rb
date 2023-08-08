@@ -1,4 +1,4 @@
-def hoi
+def hoi2
     puts "あっち向いて〜"
     puts "0(上)1(下)2(右)3(左)"
         me = gets.to_i
@@ -11,9 +11,11 @@ def hoi
     puts "------------------"
     
         if cpu == me
-        　puts "負けました"
-        else cpu != me
-        　puts "あいこです。もう一度じゃんけんをします。"
-        　require "./jyanken"
+          puts "負けました"
+        else
+          puts "あいこです。もう一度じゃんけんをします。"
+          load './janken.rb'
         end
 end
+
+hoi2
