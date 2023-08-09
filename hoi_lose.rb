@@ -22,4 +22,3 @@ def hoi2
 end
 
 hoi2
-# 質問用

@@ -38,4 +38,3 @@ end
 
 janken
 
-#質問用
