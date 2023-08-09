@@ -1,9 +1,12 @@
 def hoi2
+    
     puts "あっち向いて〜"
     puts "0(上)1(下)2(右)3(左)"
+    
         me = gets.to_i
         cpu = rand(3)
         directions = ["上","下","右","左"]
+        
     puts "ホイ！"
     puts "------------------"
     puts "あなた：#{directions[me]}を出しました"
